@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmlykubi0sw7j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_25d7y"]
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="PanelContainer" type="PanelContainer"]
+custom_minimum_size = Vector2(48, 48)
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_25d7y")

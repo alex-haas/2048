@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnrlop1pxad6c"]
+
+[ext_resource type="Texture2D" uid="uid://rgbuv1uollmr" path="res://assets/plus_col.png" id="1_hm6ff"]
+[ext_resource type="Script" path="res://perk_panel.gd" id="1_ynmev"]
+
+[node name="PerkPanel" type="MarginContainer"]
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_ynmev")
+
+[node name="Panel" type="Panel" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(240, 240)
+layout_mode = 2
+
+[node name="PerkTexture" type="TextureButton" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("1_hm6ff")
+stretch_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 128
+
+[node name="PerkLabel" type="Label" parent="Panel/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "+ Col"
+horizontal_alignment = 1
+
+[connection signal="button_down" from="Panel/PerkTexture" to="." method="_on_perk_button_down"]

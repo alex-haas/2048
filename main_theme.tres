@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dopup21yupt70"]
+
+[ext_resource type="Texture2D" uid="uid://bfhe2j2ithy03" path="res://assets/panel-bg.png" id="1_152o0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_acvfg"]
+texture = ExtResource("1_152o0")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[resource]
+Label/colors/font_color = Color(1, 0.509804, 0.454902, 1)
+Label/colors/font_outline_color = Color(0.121569, 0.0196078, 0.0627451, 1)
+Label/colors/font_shadow_color = Color(0.27451, 0.054902, 0.168627, 1)
+Label/constants/outline_size = 4
+Label/constants/shadow_offset_x = 4
+Label/constants/shadow_offset_y = 4
+Panel/styles/panel = SubResource("StyleBoxTexture_acvfg")
