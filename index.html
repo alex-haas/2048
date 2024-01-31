@@ -137,6 +137,17 @@ body {
 
 		<script src="index.js"></script>
 		<script>
+navigator.serviceWorker.getRegistrations().then(registrations => {
+    if (registrations.length <= 0) {
+        navigator.serviceWorker.register('./2048.worker.js').then((registration)=> {
+	    if (registration.active) {
+	        reload();
+	        console.log('Service worker is active');
+	    }
+	});
+    }
+});
+
 const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":142464,"index.wasm":35649444},"focusCanvas":true,"gdextensionLibs":[]};
 const engine = new Engine(GODOT_CONFIG);
 
